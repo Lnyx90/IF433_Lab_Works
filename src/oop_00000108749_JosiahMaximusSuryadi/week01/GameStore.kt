@@ -18,3 +18,5 @@ fun printReceipt(title: String, finalPrice: Int){
     println("Harga Akhir: $finalPrice")
     println("Catatan: ${userNote ?: "Tidak ada catatan"}")
 }
+
+//
