@@ -3,7 +3,7 @@ package oop_00000108749_JosiahMaximusSuryadi.week01
 import java.awt.geom.Area
 import java.lang.classfile.constantpool.DoubleEntry
 
-fun main(args: Array<String>){
+fun main(){
     val radius = 7.0
     val pi = 3.14
 
@@ -11,13 +11,7 @@ fun main(args: Array<String>){
 
     println("Radius: $radius, Area: $area")
 
-
+    println("${checkSize(area)}")
 }
 
-fun checkSize(area: Double) {
-    if (area > 100) {
-        println("This is a Big Circle")
-    } else {
-        println("This is a Small Circle")
-    }
-}
+fun checkSize(area: Double) = if(area > 100) "This is a Big Circle" else "This is a Small Circle"
