@@ -12,6 +12,9 @@ fun main(){
 fun calculateDiscount(price: Int): Int = if (price > 500000) (price * 0.8).roundToInt() else (price * 0.9).roundToInt()
 
 fun printReceipt(title: String, finalPrice: Int){
+    val userNote: String? = null
+
     println("Judul: $title")
     println("Harga Akhir: $finalPrice")
+    println("Catatan: ${userNote ?: "Tidak ada catatan"}")
 }
