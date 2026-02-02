@@ -6,10 +6,10 @@ fun main(){
     val gameTitle = "Game"
     val price = 1000000
 
-    printReceipt(finalPrice = price, title = "$gameTitle")
+    printReceipt(finalPrice = calculateDiscount(price), title = "$gameTitle")
 }
 
-fun calculateDiscount(price: Int): Int = if (price > 500000) (price * 0.8).roundToInt() else (price * 0.9).roundToInt()
+fun calculateDiscount(price: Int): Int = if (price > 500000) (price * 0.8).toInt() else (price * 0.9).toInt()
 
 fun printReceipt(title: String, finalPrice: Int){
     val userNote: String? = null
