@@ -12,4 +12,3 @@ class Student (val name: String, val nim: String, var major: String, var gap: Do
     constructor(name: String, nim: String) : this(name, nim, major = "Non-Matriculated"){
         println("LOG: Menggunakan constructor jalur umum (Tanpa Jurusan).")
     }
-}
