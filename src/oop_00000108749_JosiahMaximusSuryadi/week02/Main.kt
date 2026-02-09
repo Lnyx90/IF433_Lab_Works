@@ -73,5 +73,52 @@ fun main() {
 //    println("Total Denda   : Rp ${loan.calculateFine()}")
 
 
+    val scanner = Scanner(System.`in`)
 
+    println("\n--- Persiapan Battle ---")
+
+    print("Masukkan Nama Hero: ")
+    val heroName = scanner.nextLine()
+
+    print("Masukkan Base Damage Hero: ")
+    val damage = scanner.nextInt()
+
+    val myHero = Hero(heroName, damage)
+
+    var enemyHp = 100
+
+    while (myHero.isAlive() && enemyHp > 0) {
+        println("HP ${myHero.name}: ${myHero.hp} | HP Musuh: $enemyHp")
+        println("Menu: 1. Serang, 2. Kabur")
+        print("Pilih aksi: ")
+
+        when (scanner.nextInt()) {
+            1 -> {
+                myHero.attack("Monster")
+                enemyHp -= myHero.baseDamage
+                if (enemyHp < 0) enemyHp = 0
+                println("HP Musuh tersisa: $enemyHp")
+
+                if (enemyHp > 0) {
+                    val enemyAtk = (10..20).random()
+                    println("Monster membalas dengan $enemyAtk damage!")
+                    myHero.takeDamage(enemyAtk)
+                    println("HP ${myHero.name} tersisa: ${myHero.hp}")
+                }
+            }
+            2 -> {
+                println("${myHero.name} memilih kabur dari medan tempur!")
+                break
+            }
+            else -> println("Aksi tidak valid!")
+        }
+    }
+
+    if (!myHero.isAlive()) {
+        println("Kalah! ${myHero.name} telah gugur.")
+    } else if (enemyHp <= 0) {
+        println("MENANG! Monster berhasil dikalahkan oleh ${myHero.name}.")
+    } else {
+        println("Pertarungan berakhir tanpa pemenang (Kabur).")
+    }
 }
