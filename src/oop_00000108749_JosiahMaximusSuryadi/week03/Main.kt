@@ -11,11 +11,18 @@ fun main() {
 //
 //    println("Pajak yang harus dibayar: ${e.tax}")
 
-    val sword = Weapon("Katana")
+//    val sword = Weapon("Katana")
+//
+//    sword.damage = -50
+//
+//    sword.damage = 9999
+//
+//    println("Weapon: ${sword.name}, Damage: ${sword.damage}, Tier: ${sword.tier}")
 
-    sword.damage = -50
+    val player = Player("Josiah")
 
-    sword.damage = 9999
+    player.addXp(50)
+    player.addXp(60)
 
-    println("Weapon: ${sword.name}, Damage: ${sword.damage}, Tier: ${sword.tier}")
+    println("Player: ${player.username}, Level: ${player.level}")
 }
