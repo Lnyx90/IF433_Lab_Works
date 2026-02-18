@@ -24,6 +24,6 @@ class Employee(val name: String) {
         println("Karyawan: $name, Rating: $performanceRating")
     }
 
-//    val tax: Double
-//        get() = salary * 0.1
+    val tax: Double
+        get() = salary * 0.1
 }
