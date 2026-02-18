@@ -11,4 +11,3 @@ fun main() {
 
     println("Pajak yang harus dibayar: ${e.tax}")
 }
-//
