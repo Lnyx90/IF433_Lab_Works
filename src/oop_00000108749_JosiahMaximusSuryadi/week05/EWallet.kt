@@ -12,5 +12,8 @@ class EWallet(accountName: String, var balance: Double) : PaymentMethod(accountN
         }
     }
 
-    fun topUp(amount: Double): Double = balance + amount
+    fun topUp(amount: Double) {
+        balance += amount
+        println("TopUp $balance berhasil")
+    }
 }
