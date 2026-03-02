@@ -33,19 +33,19 @@ fun main() {
 
     println("Luas Persegi: $luasPersegi, Luas Persegi Panjang: $luasPersegiPanjang, Luas Lingkaran: $luasLingkaran")
 
-//    val eWallet = EWallet("Josiah", 50000.0)
-//    val creditCard = CreditCard("Josiah", 100000.0)
-//
-//    val daftarPaymentMethod: List<PaymentMethod> = listOf(eWallet, creditCard)
-//
-//    for (PaymentMethod in daftarPaymentMethod) {
-//        when(PaymentMethod) {
-//            is EWallet -> eWallet.topUp(50000.0)
-//        }
-//
-//        PaymentMethod.processPayment(75000.0)
-//        println("Nama akun: ${PaymentMethod.accountName}")
-//        println("Metode pembayaran: ${PaymentMethod.javaClass.simpleName}\n")
+    val eWallet = EWallet("Josiah", 50000.0)
+    val creditCard = CreditCard("Josiah", 100000.0)
+
+    val daftarPaymentMethod: List<PaymentMethod> = listOf(eWallet, creditCard)
+
+    for (PaymentMethod in daftarPaymentMethod) {
+        when(PaymentMethod) {
+            is EWallet -> eWallet.topUp(50000.0)
+        }
+
+        PaymentMethod.processPayment(75000.0)
+        println("Nama akun: ${PaymentMethod.accountName}")
+        println("Metode pembayaran: ${PaymentMethod.javaClass.simpleName}\n")
     }
 
 
