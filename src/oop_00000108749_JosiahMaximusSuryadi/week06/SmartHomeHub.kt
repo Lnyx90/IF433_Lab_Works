@@ -4,6 +4,7 @@ class SmartHomeHub {
     val devices = mutableListOf<SmartDevice>()
 
     fun addDevice(device: SmartDevice) {
+        devices.add(device)
     }
 
     fun turnOffAllSwitches() {
@@ -13,4 +14,6 @@ class SmartHomeHub {
             }
         }
     }
+
+
 }
