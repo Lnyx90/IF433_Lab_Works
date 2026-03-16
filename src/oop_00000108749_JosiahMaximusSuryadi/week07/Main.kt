@@ -37,4 +37,10 @@ fun main() {
     }
 
     println(uiMessage)
+
+    println("=== TEST GAME ENGINE ===")
+    GameManager.startGame()
+    GameManager.startGame()
+
+
 }
