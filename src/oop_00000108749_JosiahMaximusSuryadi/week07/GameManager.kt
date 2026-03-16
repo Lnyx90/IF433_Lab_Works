@@ -5,8 +5,9 @@ object GameManager {
 
     fun startGame() {
         if (isGamingRunning) {
-            println("Game sudah berjalan!")
+            println("Game sudah berjalan! Mencegah inisiasi ganda.")
         } else {
+            isGamingRunning = true
             println("Memulai Game Engine...")
         }
     }
