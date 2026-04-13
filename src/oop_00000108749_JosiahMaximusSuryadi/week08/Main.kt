@@ -1,0 +1,9 @@
+package oop_00000108749_JosiahMaximusSuryadi.week08
+
+fun main() {
+    println("=== TEST SAFE CALL & ELVIS ===")
+    val emptyOrder = Order(null, null)
+
+    val destination = emptyOrder.deliveryDetails?.address?.city?.name ?: "Kota tidak diketahui"
+    println("Tujuan pengiriman: $destination")
+}
