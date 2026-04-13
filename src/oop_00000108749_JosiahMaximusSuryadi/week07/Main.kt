@@ -38,14 +38,14 @@ fun main() {
 
     println(uiMessage)
 
-    println("=== TEST GAME ENGINE ===")
+    println("\n=== TEST GAME ENGINE ===")
     GameManager.startGame()
     GameManager.startGame()
 
-    println("=== DATA RARITY CHECK ===")
+    println("\n=== DATA RARITY CHECK ===")
     println("Drop Chance untuk LEGENDARY: ${ItemRarity.LEGENDARY.dropChance}%")
 
-    println("=== WEAPON FORGING ===")
+    println("\n=== WEAPON FORGING ===")
     val starterWeapon = Weapon.forgeStarterSword()
 
     println("Detail Senjata Starter:")
@@ -53,4 +53,17 @@ fun main() {
     println("Damage     : ${starterWeapon.item.damage}")
     println("Rarity     : ${starterWeapon.item.rarity}")
     println("Durability : ${starterWeapon.durability}")
+
+    val upgradedWeapon = starterWeapon.item.copy(
+        damage = 25
+    )
+
+    println("\n=== SIMULASI UPGRADE BLACKSMITH ===")
+    println("Item lama: ${starterWeapon.item.name} (Damage: ${starterWeapon.item.damage})")
+    println("Item baru: ${upgradedWeapon.name} (Damage: ${upgradedWeapon.damage})")
+
+    println("\n=== LOG PERJALANAN PEMAIN ===")
+    processEvent(BattleState.MonsterEncounter("Goblin Nakal"))
+    processEvent(BattleState.LootDropped(upgradedWeapon))
+    processEvent(BattleState.GameOver("Terkena jebakan racun"))
 }
