@@ -5,3 +5,4 @@ data class SmartDevice(var name: String, var category: String, var isOnline: Boo
 fun SmartDevice.diagnose(): String {
     return "[DIAGNOSTIK] $name | Kategori: $category |Status: ${if (isOnline) "Online" else "Offline"} | Daya: $powerLoad Watt"
 }
+

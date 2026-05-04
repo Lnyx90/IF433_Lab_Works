@@ -13,7 +13,7 @@ fun main() {
     println("\n=== TEST ALSO ===")
     val numbers = mutableListOf(1, 2, 3)
     numbers.also {
-        println("log Sebelum ditambah: $it"+)
+        println("log Sebelum ditambah: $it")
     }.add(4)
     println("Setelah ditambah: $$numbers")
 
