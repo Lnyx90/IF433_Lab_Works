@@ -51,5 +51,9 @@ fun main() {
         }
     }
 
-
+    val totalPower = homeDevices.run {
+        sumOf { it.powerLoad }
+    }
+    println("=== Kalkulasi Total Daya ===")
+    println("Total Daya: $totalPower W")
 }
