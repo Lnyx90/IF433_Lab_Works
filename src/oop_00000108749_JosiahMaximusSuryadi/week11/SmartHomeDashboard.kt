@@ -42,4 +42,14 @@ fun main() {
         println(device.diagnose())
     }
 
+    with(homeDevices) {
+        println("=== Rangkuman ===")
+        println("Jumlah perangkat: ${this.size}")
+        println("Daftar Perangkat:")
+        this.forEachIndexed { index, device ->
+            println("${index + 1}. ${device.name} (${device.category})")
+        }
+    }
+
+
 }
