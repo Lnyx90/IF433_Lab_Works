@@ -56,4 +56,9 @@ fun main() {
     }
     println("=== Kalkulasi Total Daya ===")
     println("Total Daya: $totalPower W")
+
+    println("=== Dashboard Perangkat ===")
+    homeDevices.forEach { device ->
+        println(device.diagnose())
+    }
 }
