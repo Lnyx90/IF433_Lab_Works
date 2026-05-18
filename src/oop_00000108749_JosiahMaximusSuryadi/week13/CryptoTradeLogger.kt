@@ -50,4 +50,10 @@ fun main() {
 
     val loadedData = loadTrades(filePath)
     val totalPnl = loadedData.sumOf { it.pnl }
+
+    println("\n=== DAFTAR TRANSAKSI VALID ===")
+    loadedData.forEach { trade ->
+        println("ID: ${trade.id} | ${trade.symbol} (${trade.margin}) | PnL: ${trade.pnl}")
+    }
+    println("\n=== TOTAL PnL BERSIH: $totalPnl ===")
 }
