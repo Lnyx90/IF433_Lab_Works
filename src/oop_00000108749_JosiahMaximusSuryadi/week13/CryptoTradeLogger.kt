@@ -10,7 +10,7 @@ fun fromCsvTrade(line: String): TradeRecord? {
     return try {
         val parts = line.split(",")
 
-        TradeRecord(parts[0].trim(), parts[1].trim(), parts[2].trim(), parts[3].trim().toDouble(), parts[4].trim().toDouble())
+        TradeRecord(parts[0].trim().toInt(), parts[1].trim(), parts[2].trim(), parts[3].trim().toDouble(), parts[4].trim().toDouble())
     } catch (e: Exception) {
         println("(Log) Data korup diabaikan: $line")
         null
